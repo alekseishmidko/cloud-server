@@ -6,9 +6,10 @@ import { UserModule } from './user/user.module';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserEntity } from './user/entities/user.entity';
-import { FileModule } from './file/file.module';
-import { FileEntity } from './file/entities/file.entity';
+
+import { FileEntity } from './files/entities/file.entity';
 import { ConfigModule } from '@nestjs/config';
+import { FilesModule } from './files/files.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -23,7 +24,7 @@ import { ConfigModule } from '@nestjs/config';
       synchronize: true,
     }),
     UserModule,
-    FileModule,
+    FilesModule,
   ],
   controllers: [AppController],
 

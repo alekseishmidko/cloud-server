@@ -1,4 +1,3 @@
-import { Delete } from '@nestjs/common';
 import { UserEntity } from 'src/user/entities/user.entity';
 import {
   Column,
@@ -7,7 +6,10 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-
+export enum FileType {
+  PHOTOS = 'photos',
+  TRASH = 'trash',
+}
 @Entity('files')
 export class FileEntity {
   @PrimaryGeneratedColumn()

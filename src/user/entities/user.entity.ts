@@ -1,4 +1,4 @@
-import { FileEntity } from 'src/file/entities/file.entity';
+import { FileEntity } from 'src/files/entities/file.entity';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('users')
